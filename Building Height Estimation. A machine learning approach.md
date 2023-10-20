@@ -28,9 +28,11 @@ The combination of these data sources bridges their individual gaps, allowing us
 
 ## 2. Domain of Study
 
-The experiment was carried out in Sydney, serving as a key motivator for this study. The selected study area is depicted in Figure 1. In this region, OSM data provides a comprehensive building dataset, including geometry and height information, covering only around 30% of the buildings present in the MBF dataset, which could affect the model's performance.
+The experiment is placed in Sydney, serving also as the motivator for this study. Figure 1 depicts a selected domain of 50km by 40km. The top-left section showcases the entire Sydney metropolis, while the top-right displays the study domain with the local climate zone map. In this region, OSM data provides a comprehensive building dataset (bottom left), including geometry and height information, covering only around 30% of the buildings present in the MBF dataset (bottom right). Comapred to the 600,000 buildings footprints in MBF dataset, there are only 200,000 in OSM with height data, constituting only a third of the dataset.
 
 ![Alt Text](figures/Picture1.png)
+
+**Figure 1**: Domain chosen of sidney 50km east to west and 40km north to south. 
 
 Two experiments have been conducted, one using data solely from the Sydney domain (around 180,000 buildings) and the other including a similar-sized domain in Grenoble (approximately 200,000 buildings), which significantly enhanced the model's performance.
 
