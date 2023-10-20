@@ -81,5 +81,3 @@ In summary, this study presents promising results, with the machine learning app
 **Future Study:**
 
 Further research is essential to explore the impact of this method on grid cell statistics for meteorological applications. Evaluating its alignment with the WRF plus building energy model (BEP+BEM), which relies on statistical information within grid cells rather than detailed building data, will provide a deeper understanding of the method's compatibility with broader meteorological applications.
-
-
