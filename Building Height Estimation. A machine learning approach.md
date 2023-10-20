@@ -4,7 +4,7 @@ Urban meteorology studies are essential for understanding and predicting complex
 
 Obtaining building data is challenging due to data availability, quality, privacy, cost, and integration issues. Building data can be accessed from sources like OpenStreetMap (OSM), Microsoft Building Footprints, Google Maps, government platforms, and local municipal open data portals.
 
-This document outlines a novel methodology for estimating building heights, primarily for urban climate and weather research but also applicable to urban planning.
+This document outlines a novel methodology for estimating building heights from a machine learning approach, primarily for urban climate and weather research but also applicable to urban planning.
 
 The study demonstrates the potential of this approach in improving height estimations compared to traditional methods based solely on local climate zones. Future work may involve extending this methodology to multiple cities and integrating it into existing meteorological modeling frameworks.
 
@@ -42,10 +42,32 @@ In the conventional approach, building heights are estimated by assigning a sing
 
 ### XGBoost Model
 
-We employ an XGBoost machine learning model, utilizing features such as building area, perimeter, and location (latitude and longitude) to predict building heights. The first experiment is conducted on a training set of 140,000 buildings for Sydney, and for the second experiment, the set is extended with 200,000 buildings from the Grenoble area.
+We employ an XGBoost machine learning model, utilizing features such as building area, perimeter, and location (latitude and longitude) to predict building heights. The first experiment is conducted on a training set of 140,000 buildings for Sydney, and for the second experiment, the set is extended with 200,000 buildings from the Grenoble area, making a total of 340,000.
 
 The evaluation of both methods is done on a test sample of 40,000 buildings. By evaluating the accuracy and effectiveness of the XGBoost model against the local climate zones approach, we determine the most reliable and accurate approach for building height estimation for urban climate modeling purposes.
 
 # Results
 
 The results from both approaches are shown in Table 1. The LCZ approach estimates building height with a MAE of 8.5 m, the XGBoost first experiment shows an MAE of 5.3 m, and the XGBoost second experiment an MAE of 2.3 m.
+
+| Approach                   | Train Sample Size | Test Sample Size | MAE (meters) |
+|----------------------------|-------------------|------------------|--------------|
+| LCZ Approach               | N/A               | 40,000              | 8.5          |
+| XGBoost (First Experiment) | 140,000           | 40,000           | 5.3          |
+| XGBoost (Second Experiment)| 340,000           | 40,000           | 2.3          |
+
+The results of table 1 show a clear ingcrease in performance of the machine learning approach compared to the LCZ approach, from 8.5 meters down to 5.3 meters of MAE. This is further improved when using the larger dataset including the buildings of Grenoble area, bringing the MAE down to 2.3 meters. 
+
+Figure 2 shows a comparison of que error distribuition for the LCZ approach and the XGboost second experiment. The LCZ approach deviates from the true height with a standard deviation of 
+
+**Figure 1**: Probability Density Function (PDF) of Mean Estimation Errors for Building Heights in Sydney - LCZ Approach vs. XGBoost Approach (Experiment 2)
+
+| Statistic                | XGBoost (2) | LCZ  |
+|--------------------------|-------------|------|
+| Mean                     | -0.02       | -1.75 |
+| Standard Deviation       | 5.58        | 18.97 |
+| 10th Percentile          | -2.5        | -12.1 |
+| 90th Percentile          | 2.75        | 11.0  |
+
+
+"Table 1: Mean and Standard Deviation of Building Height Estimation Errors - XGBoost (Experiment 2) vs. LCZ Approach"
