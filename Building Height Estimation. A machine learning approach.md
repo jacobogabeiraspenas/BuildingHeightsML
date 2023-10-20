@@ -30,6 +30,8 @@ The combination of these data sources bridges their individual gaps, allowing us
 
 The experiment was carried out in Sydney, serving as a key motivator for this study. The selected study area is depicted in Figure 1. In this region, OSM data provides a comprehensive building dataset, including geometry and height information, covering only around 30% of the buildings present in the MBF dataset, which could affect the model's performance.
 
+![Alt Text](figures/Picture1.png)
+
 Two experiments have been conducted, one using data solely from the Sydney domain (around 180,000 buildings) and the other including a similar-sized domain in Grenoble (approximately 200,000 buildings), which significantly enhanced the model's performance.
 
 ## 3. Model and Approach Comparison
