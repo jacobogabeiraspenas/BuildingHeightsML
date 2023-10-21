@@ -3,11 +3,11 @@
 
 Urban meteorology studies are essential for understanding and predicting complex weather patterns and climate dynamics in urban environments. Precise urban morphology data is crucial due to the significant impact of urban structures on local weather and climate. Building heights, layouts, and distribution directly influence factors like temperature, wind flow, and precipitation, making them vital components of urban meteorological models.
 
-Obtaining building data is challenging due to data availability, quality, privacy, cost, and integration issues. Building data can be accessed from sources like OpenStreetMap (OSM), Microsoft Building Footprints, Google Maps, government platforms, and local municipal open data portals.
+Building data can be accessed from sources like OpenStreetMap (OSM), Microsoft Building Footprints, Google Maps, government platforms, and local municipal open data portals. However, obtaining building data is challenging due to data availability, quality, privacy, cost, integration, and missing data. While building footprints are easier to obtain, specific information like building height can remain elusive.
 
-This document outlines a novel methodology for estimating building heights from a machine learning approach, primarily for urban climate and weather research but also applicable to urban planning.
+This document outlines a novel methodology for estimating building heights from a machine learning approach. This is achieved by integrating various data sources to fill the gaps where building height information is missing. Here we demonstrate the potential of this approach compared to traditional methods based solely on local climate zones.
 
-The study demonstrates the potential of this approach in improving height estimations compared to traditional methods based solely on local climate zones. Future work may involve extending this methodology to multiple cities and integrating it into existing meteorological modeling frameworks.
+This work can be of great interest primarily for urban climate and weather research, possibly finding also applications in other disciplines such as urban planning.
 
 # Methodology
 
