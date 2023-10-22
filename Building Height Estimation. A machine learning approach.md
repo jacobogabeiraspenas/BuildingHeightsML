@@ -18,7 +18,7 @@ We source building data from two primary providers: OpenStreetMaps (OSM) and the
 ### OpenStreetMaps (OSM)
 
 - Provides detailed height information for buildings.
-- Lacks comprehensive building data, particularly in terms of coverage.
+- Lacks building data, particularly in terms of coverage.
 
 ### Microsoft Building Footprints (MBF)
 
